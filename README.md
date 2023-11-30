@@ -46,7 +46,7 @@ Update your `.env` file with the appropriate database connection details:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=flat-security
+DB_DATABASE=amazingfoods
 DB_USERNAME=root
 DB_PASSWORD=
 ```

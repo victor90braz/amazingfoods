@@ -35,7 +35,7 @@ npm --version 10.0.0
 ### Clone the Repository:
 
 ```bash
-git clone https://github.com/victor90braz/flat-security
+git clone https://github.com/victor90braz/amazingfoods.git
 ```
 
 ## Database Connection

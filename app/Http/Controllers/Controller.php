@@ -10,8 +10,8 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    public function app() {
+    public function home() {
 
-        return view('app');
+        return view('pages.home');
     }
 }

@@ -7,9 +7,7 @@
 </head>
 <body>
 
-    <h1 class="text-3xl font-bold underline">
-        Amazing Foods
-    </h1>
+    {{ $slot }}
 
 </body>
 </html>

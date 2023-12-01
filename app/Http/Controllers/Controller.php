@@ -12,6 +12,6 @@ class Controller extends BaseController
 
     public function home() {
 
-        return view('pages.home');
+        return view('pages.home.home');
     }
 }

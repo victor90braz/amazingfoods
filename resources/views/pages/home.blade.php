@@ -1,8 +1,10 @@
 <x-layout>
-    <h1 class="text-3xl font-bold underline bg-blue-500">
-        Amazing Foods
-    </h1>
+    <x-panel>
+        <h1 class="text-3xl font-bold underline">
+            <a href="/"> Amazing Foods</a>
+        </h1>
 
-    @include('pages.register')
-    @include('pages.login')
+        @include('pages.register')
+        @include('pages.login')
+    </x-panel>
 </x-layout>

@@ -11,24 +11,17 @@ class RegisterController extends Controller
         return view("pages.register.create");
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
+
         $validator = $request->validate([
             'fullName' => ['required', 'string', 'max:191'],
             'email' => ['required', 'string', 'max:191', 'email', 'unique:users'],
             'password' => ['required', 'string', Rules\Password::default()]
         ]);
 
-        if ($validator) {
-            try {
-                (new User())->create($validator);
-                return redirect('/')->with('success', 'Registration successful!');
-            } catch (\Exception $e) {
-                return back()->withErrors(['message' => 'Registration failed. Please try again.']);
-            }
-        } else {
-            return back()->withErrors($validator)->withInput();
-        }
+        User::create($validator);
+
+        return redirect('/');
     }
 
 }

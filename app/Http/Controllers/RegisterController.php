@@ -20,18 +20,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', Rules\Password::default()]
         ]);
 
-        if(!$validator) {
-            return back()->withErrors([
-                'fullName' => 'Error message for fullName field',
-                'email' => 'Error message for email field',
-                'password' => 'Error message for password field',
-            ]);
-
-        }
-
         User::create($validator);
-
-        Auth::user();
 
         return redirect('/');
     }

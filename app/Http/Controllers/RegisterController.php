@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules;
 class RegisterController extends Controller
 {
@@ -29,6 +30,8 @@ class RegisterController extends Controller
         }
 
         User::create($validator);
+
+        Auth::user();
 
         return redirect('/');
     }

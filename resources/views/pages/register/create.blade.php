@@ -6,7 +6,36 @@
         </div>
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6" action="#" method="POST">
+
+        <div>
+            @error('fullName')
+                <p class="text-red-500">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <div>
+            @error('email')
+                <p class="text-red-500">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <div>
+            @error('password')
+                <p class="text-red-500">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <form class="space-y-6" action="{{route('register.store')}}" method="POST">
+
+            @csrf
+
+            <div>
+                <label for="fullName" class="block text-sm font-medium leading-6 text-gray-900">Full Name</label>
+                <div class="mt-2">
+                    <input id="fullName" name="fullName" type="fullName" autocomplete="fullName" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+
             <div>
             <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
             <div class="mt-2">

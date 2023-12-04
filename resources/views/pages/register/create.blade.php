@@ -9,9 +9,9 @@
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
 
-        @foreach (['fullName', 'email', 'password'] as $item)
+        @foreach (['fullName', 'email', 'password'] as $attribute)
             <div>
-                @error($item)
+                @error($attribute)
                     <p class="text-red-500">{{ $message }}</p>
                 @enderror
             </div>

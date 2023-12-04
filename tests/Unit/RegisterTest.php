@@ -12,9 +12,7 @@ class RegisterTest extends TestCase
 
     public function test_the_application_get_assertStatus_200(): void
     {
-
         $response = $this->get('/register/create');
-
         $response->assertStatus(200);
     }
 

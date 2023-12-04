@@ -10,9 +10,14 @@ class RegisterTest extends TestCase
 {
     use RefreshDatabase, WithFaker;
 
-    /**
-     * A basic test example.
-     */
+    public function test_the_application_get_assertStatus_200(): void
+    {
+
+        $response = $this->get('/register/create');
+
+        $response->assertStatus(200);
+    }
+
     public function test_the_application_registers_a_user_successfully(): void
     {
         $response = $this->post('/register/store', [

@@ -29,6 +29,4 @@ class RegisterTest extends TestCase
 
         $this->assertDatabaseHas(User::class, ['email' => 'test@example.com']);
     }
-
-
 }

@@ -2,10 +2,8 @@
 
 namespace Tests\Unit;
 
-use App\Http\Controllers\RegisterController;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Validation\Rules\Password;
 use Tests\TestCase;
 
 class RegisterTest extends TestCase
@@ -22,7 +20,7 @@ class RegisterTest extends TestCase
             'email' => 'test@example.com',
             'password' => 'password123!P',
         ]);
-        $response->assertStatus(302); // Check for a redirect status
+        $response->assertStatus(302);
         $response->assertRedirect('/');
         $this->assertDatabaseHas('users', ['email' => 'test@example.com']);
     }

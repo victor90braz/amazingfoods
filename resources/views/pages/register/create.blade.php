@@ -7,23 +7,13 @@
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
 
-        <div>
-            @error('fullName')
-                <p class="text-red-500">{{ $message }}</p>
-            @enderror
-        </div>
-
-        <div>
-            @error('email')
-                <p class="text-red-500">{{ $message }}</p>
-            @enderror
-        </div>
-
-        <div>
-            @error('password')
-                <p class="text-red-500">{{ $message }}</p>
-            @enderror
-        </div>
+        @foreach (['fullName', 'email', 'password'] as $item)
+            <div>
+                @error($item)
+                    <p class="text-red-500">{{ $message }}</p>
+                @enderror
+            </div>
+        @endforeach
 
         <form class="space-y-6" action="{{route('register.store')}}" method="POST">
 

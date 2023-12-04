@@ -9,7 +9,7 @@
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
 
-        @foreach (['fullName', 'email', 'password'] as $attribute)
+        @foreach (['full_name', 'email', 'password'] as $attribute)
             <div>
                 @error($attribute)
                     <p class="text-red-500">{{ $message }}</p>
@@ -22,9 +22,9 @@
             @csrf
 
             <div>
-                <label for="fullName" class="block text-sm font-medium leading-6 text-gray-900">Full Name</label>
+                <label for="full_name" class="block text-sm font-medium leading-6 text-gray-900">Full Name</label>
                 <div class="mt-2">
-                    <input id="fullName" name="fullName" type="fullName" autocomplete="fullName" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <input id="full_name" name="full_name" type="text" autocomplete="full_name" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
 
